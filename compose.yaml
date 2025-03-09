@@ -1,4 +1,3 @@
-
 services:
   next:
     build:
@@ -10,6 +9,7 @@ services:
       - PORT=3000
       - CHOKIDAR_USEPOLLING=true
       - WATCHPACK_POLLING=true
+      - NEXT_PUBLIC_API_URL=http://localhost:4001/api  # 既存のバックエンドを使う
     volumes:
       - ./client:/usr/src/app
       - /usr/src/app/node_modules
